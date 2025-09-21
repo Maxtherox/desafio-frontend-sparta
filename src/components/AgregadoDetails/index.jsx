@@ -24,7 +24,7 @@ export default function AgregadoDetails({ metadados }) {
       <MetadataSection>
         <MetadataTitle>Variáveis Disponíveis</MetadataTitle>
         <MetadataList>
-          {(variaveis || []).map(v => <li key={v.id}>{v.nome} ({v.unidade})</li>)}
+          {(variaveis || []).map(v => <li key={v.id}>{v.id} - {v.nome} ({v.unidade})</li>)}
         </MetadataList>
       </MetadataSection>
 
