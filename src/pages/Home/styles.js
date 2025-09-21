@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const PageTitle = styled.h1`
-  font-size: 3.6rem;
+  font-size: 6.4rem;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 2rem;
   font-weight: 700;
