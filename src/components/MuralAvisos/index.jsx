@@ -12,9 +12,11 @@ const MuralAvisos = () => {
   const [notification, setNotification] = useState("");
 
   const avisos = [
-    { id: 1, text: "Novos dados do IPCA disponíveis para consulta." },
-    { id: 2, text: "Manutenção programada para o dia 30/09 às 22h." },
-    { id: 3, text: "Atualização na visualização de gráficos de barras." },
+    { id: 1, text: "As páginas Home, Dados e Gráficos estão 100% implementadas." },
+    { id: 2, text: "As demais páginas são placeholders, pois o objetivo do desafio foi atingido com a visualização de dados." },
+    { id: 3, text: "Novos dados do IPCA disponíveis para consulta." },
+    { id: 4, text: "O design da aplicação foi atualizado para uma melhor experiência do usuário." },
+    { id: 5, text: "A performance de carregamento dos gráficos foi otimizada." },
   ];
 
   const handleShowNotification = () => {
