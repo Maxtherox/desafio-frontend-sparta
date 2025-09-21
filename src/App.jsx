@@ -11,6 +11,11 @@ import Dados from "./pages/Dados";
 import Graficos from "./pages/Graficos";
 import Usuarios from "./pages/Usuarios";
 import Config from "./pages/Config";
+import Filtros from "./pages/Filtros";
+import Metodologia from "./pages/Metodologia";
+import Indicadores from "./pages/Indicadores";
+import Contato from "./pages/Contato";
+import Busca from "./pages/Busca";
 
 function AppContent() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +34,11 @@ function AppContent() {
             <Route path="/graficos" element={<Graficos />} />
             <Route path="/usuarios" element={<Usuarios />} />
             <Route path="/config" element={<Config />} />
+            <Route path="/filtros" element={<Filtros />} />
+            <Route path="/metodologia" element={<Metodologia />} />
+            <Route path="/indicadores" element={<Indicadores />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/busca" element={<Busca />} />
           </Routes>
         </MainContent>
       </ContentContainer>
