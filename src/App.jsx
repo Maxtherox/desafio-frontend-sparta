@@ -1,0 +1,49 @@
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Spinner from "./components/Spinner";
+import { LoadingProvider, useLoading } from "./context/LoadingContext";
+import { AppContainer, ContentContainer, MainContent } from "./App.styles";
+
+import Home from "./pages/Home";
+import Dados from "./pages/Dados";
+import Graficos from "./pages/Graficos";
+import Usuarios from "./pages/Usuarios";
+import Config from "./pages/Config";
+
+function AppContent() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { isLoading } = useLoading();
+
+  return (
+    <AppContainer>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ContentContainer>
+        <Header isOpen={isOpen} />
+        {isLoading && <Spinner />}
+        <MainContent isOpen={isOpen}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dados" element={<Dados />} />
+            <Route path="/graficos" element={<Graficos />} />
+            <Route path="/usuarios" element={<Usuarios />} />
+            <Route path="/config" element={<Config />} />
+          </Routes>
+        </MainContent>
+      </ContentContainer>
+    </AppContainer>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <LoadingProvider>
+        <AppContent />
+      </LoadingProvider>
+    </Router>
+  );
+}
+
+export default App;
