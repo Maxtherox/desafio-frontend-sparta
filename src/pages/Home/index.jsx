@@ -1,9 +1,10 @@
+import MuralAvisos from "../../components/MuralAvisos";
+import { HomeContainer, PageTitle } from "./styles";
+import { useLoading } from "../../context/LoadingContext";
 import { useEffect, useState } from "react";
 import { getIPCAData, processIPCAData } from "../../services/ibge";
 import Card from "../../components/Card";
-import { HomeContainer } from "./styles";
-import { useLoading } from "../../context/LoadingContext";
-
+import { motion } from "framer-motion";
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -64,20 +65,24 @@ export default function Home() {
   }, [showLoader, hideLoader]);
 
   return (
-    <HomeContainer
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      {summaryData.map((card) => (
-        <Card
-          key={card.id}
-          title={card.title}
-          description={card.description}
-          content={card.content}
-          footer={card.footer}
-        />
-      ))}
-    </HomeContainer>
+    <>
+      <PageTitle>This is SPΛRTΛ!</PageTitle>
+      <MuralAvisos />
+      <HomeContainer
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {summaryData.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            description={card.description}
+            content={card.content}
+            footer={card.footer}
+          />
+        ))}
+      </HomeContainer>
+    </>
   );
 }
