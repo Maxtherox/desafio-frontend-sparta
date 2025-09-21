@@ -46,7 +46,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             <span>SPΛRTΛ</span>
           </>
         ) : (
-          <img src={logoWhite} alt="Logo" style={{ width: "36px" }} />
+          <img src={logoWhite} alt="Logo" style={{ width: "24px" }} />
         )}
       </ToggleButton>
       <IconList>

@@ -7,6 +7,7 @@ export const theme = {
     link: "#2E4A91",         // Links
     sidebarIcon: "#FFFFFF",  // Ícones do menu lateral
     border: "#E0E0E0",       // Bordas suaves
+    white: "#FFFFFF",       // Branco puro
   },
   typography: {
     fontFamily: "'Roboto', sans-serif",

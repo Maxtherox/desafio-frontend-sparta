@@ -45,7 +45,7 @@ export default function Home() {
 
             return {
               id: metric.variable,
-              title: metric.title,
+              title: `IPCA - ${metric.title}`,
               description: "Índice Geral",
               content: `${latestData?.value || "N/A"}%`,
               footer: `Ref. ${latestData?.month || "N/A"}`,
